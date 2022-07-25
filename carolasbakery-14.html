@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Carola's Bakery</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-pink: #F4C4EB;
+            --fondo-cards: #D0B0CA;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cookie';
+            background-color: var(--light-pink);
+        }
+
+        .titulo {
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+
+        .subtitulo {
+            font-size: 35px;
+            font-weight: 200;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .contenedor-cards {
+            display: flex;
+            padding: 10px auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-1 {
+            width: 375px;
+            height: 200px;
+            margin-right: 15px;
+            background-color: var(--fondo-cards);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .mini-contenedor {
+            display: flex;
+            background-color: var(--fondo-cards);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .nosotros {
+            align-items: center;
+            padding: 20px 20px 20px 20px;
+            width: 200px;
+            background-color: var(--fondo-cards);
+            border-bottom-left-radius: 20px;
+        }
+
+        .nosotros-titulo {
+            font-weight: 200;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .nosotros-parrafo {
+            font-weight: 100;
+            font-size: 20px;
+            text-align: justify;
+            background-color: var(--fondo-cards);
+        }
+
+        .nosotros-imagen {
+            width: 150px;
+            height: 150px;
+            padding: 75px 10px 10px 10px;
+            position: relative;
+            background-color: var(--fondo-cards);
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card-2 {
+            width: 375px;
+            height: 200px;
+            margin-right: 15px;
+            background-color: var(--fondo-cards);
+            border-radius: 20px;
+        }
+
+        .productos-titulo {
+            font-weight: 200;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .productos-imagenes {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            align-items: center;
+            padding: 30px 40px 35px 40px;
+            background-color: var(--fondo-cards);
+            justify-content: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+        }
+
+        .tortas {
+            height: 150px;
+        }
+
+        .tortas-titulo {
+            position: absolute;
+            font-weight: 200;
+            font-size: 35px;
+            margin-top: 0;
+            text-indent: 10px;
+        }
+
+        .tortas-imagen {
+            display: inline-block;
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .postres {
+            height: 150px;
+        }
+
+        .postres-titulo {
+            position: absolute;
+            font-weight: 200;
+            font-size: 35px;
+            margin-top: 0;
+            text-indent: 10px;
+
+        }
+
+        .postres-imagen {
+            display: inline-block;
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .galletas {
+            height: 150px;
+        }
+
+        .galletas-titulo {
+            position: absolute;
+            font-weight: 200;
+            font-size: 35px;
+            margin-top: 0;
+            text-indent: 10px;
+
+        }
+
+        .galletas-imagen {
+            display: inline-block;
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            padding: 0;
+        }
+
+        .kits {
+            height: 150px;
+        }
+
+        .kits-titulo {
+            position: absolute;
+            font-weight: 200;
+            font-size: 35px;
+            margin-top: 0;
+            text-indent: 10px;
+
+        }
+
+        .kits-imagen {
+            display: inline-block;
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .card-3 {
+            width: 375px;
+            height: 200px;
+            margin-right: 15px;
+            background-color: var(--fondo-cards);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .contacto-titulo {
+            font-weight: 200;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .contacto-imagen {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            object-fit: cover;
+            margin-left: 65px;
+            background-color: var(--fondo-cards);
+            border-color: var(--fondo-cards);
+        }
+
+        .contacto-instagram {
+            font-weight: 100;
+            font-size: 20px;
+            text-align: center;
+            background-color: var(--fondo-cards);
+            padding: 30px auto 10px auto;
+
+        }
+
+        .instagram {
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            float: left;
+            position: absolute;
+            margin-left: 90px;
+        }
+
+        .contacto-telefono {
+            font-weight: 100;
+            font-size: 20px;
+            text-align: center;
+            background-color: var(--fondo-cards);
+            padding: 30px auto 10px auto;
+        }
+
+        .contenedor-botoncito {
+            align-items: center;
+            justify-items: center;
+            margin: 0;
+        }
+
+        .botoncito {
+            font-family: 'Cookie';
+            background-color: var(--black);
+            color: var(--light-pink);
+            font-weight: 200px;
+            font-size: 60px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: row-reverse;
+            position: fixed;
+            top: 700px;
+            right: 650px;
+        }
+
+        .texto-botoncito {
+            margin: 0;
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="titulo">
+            Carola's Bakery
+        </h1>
+        <h2 class="subtitulo">
+            Cooking with passion ❤🎂
+        </h2>
+        <div class="contenedor-cards">
+            <div class="card-1">
+                <p class="nosotros-titulo">Nosotros</p>
+                <div class="mini-contenedor">
+                    <div class="nosotros">
+                        <p class="nosotros-parrafo">
+                            Somos una repostería familiar creada gracias a la motivación y el talento culinario de
+                            Carolina,
+                            nuestra chef principal, quien con su entrega ha creado deliciosos postres para el deleite de
+                            nuestros clientes. Nos encanta cumplir con nuestros pedidos e ir más allá de las
+                            expectativas de
+                            quienes disfrutan de nuestros postres
+                        </p>
+                    </div>
+                    <img class="nosotros-imagen"
+                        src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="cakes">
+                </div>
+            </div>
+            <div class="card-2">
+                <p class="productos-titulo">Productos</p>
+                <div class="productos-imagenes">
+                    <div class="tortas">
+                        <p class="tortas-titulo">Tortas</p>
+                        <img class="tortas-imagen"
+                            src="https://images.pexels.com/photos/2680603/pexels-photo-2680603.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="cake">
+                    </div>
+                    <div class="galletas">
+                        <p class="galletas-titulo">Galletas</p>
+                        <img class="galletas-imagen"
+                            src="https://images.pexels.com/photos/4110541/pexels-photo-4110541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="cookie">
+                    </div>
+                    <div class="postres">
+                        <p class="postres-titulo">Postres</p>
+                        <img class="postres-imagen"
+                            src="https://images.pexels.com/photos/5733500/pexels-photo-5733500.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="postre">
+                    </div>
+                    <div class="kits">
+                        <p class="kits-titulo">Kits</p>
+                        <img class="kits-imagen"
+                            src="https://images.pexels.com/photos/3553702/pexels-photo-3553702.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="kit">
+                    </div>
+                </div>
+            </div>
+            <div class="card-3">
+                <p class="contacto-titulo">Contacto</p>
+                <img class="contacto-imagen"
+                    src="https://img.freepik.com/vector-premium/cute-bakery-chef-chica-sosteniendo-pastel-sonriente-logo-ilustracion-arte-dibujos-animados_56104-51.jpg?w=2000"
+                    alt="muñeca">
+                <p class="contacto-telefono">+573137656563</p>
+                <img class="instagram"
+                    src="data:image/jpeg;base64,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"
+                    alt="">
+                <p class="contacto-instagram">@carolasbakery_</p>
+            </div>
+        </div>
+        <footer class="contenedor-botoncito">
+            <button class="botoncito">
+                <p class="texto-botoncito">Comprar ahora 🛒</p>
+            </button>
+        </footer>
+    </div>
+</body>
+
+</html>
